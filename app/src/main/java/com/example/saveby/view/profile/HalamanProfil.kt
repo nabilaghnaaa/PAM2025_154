@@ -50,7 +50,6 @@ fun HalamanProfil(
 
             Spacer(modifier = Modifier.height(30.dp))
 
-            // ===== AVATAR =====
             Box(
                 modifier = Modifier
                     .size(110.dp)
@@ -68,7 +67,6 @@ fun HalamanProfil(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // ===== USER INFO =====
             Text(
                 text = user?.name ?: "User SaveBy",
                 fontSize = 22.sp,
@@ -83,7 +81,6 @@ fun HalamanProfil(
 
             Spacer(modifier = Modifier.height(50.dp))
 
-            // ===== LOGOUT CARD ONLY =====
             Card(
                 modifier = Modifier
                     .fillMaxWidth()

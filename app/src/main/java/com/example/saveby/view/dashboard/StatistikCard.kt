@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun RowScope.StatistikCard( // Tambahkan RowScope agar .weight(1f) bisa digunakan
+fun RowScope.StatistikCard(
     title: String,
     value: String,
     containerColor: Color,
@@ -20,7 +20,7 @@ fun RowScope.StatistikCard( // Tambahkan RowScope agar .weight(1f) bisa digunaka
 ) {
     Card(
         modifier = Modifier
-            .weight(1f) // Sekarang ini legal karena ada RowScope
+            .weight(1f)
             .height(100.dp)
             .clickable { onClick() },
         colors = CardDefaults.cardColors(containerColor = containerColor)

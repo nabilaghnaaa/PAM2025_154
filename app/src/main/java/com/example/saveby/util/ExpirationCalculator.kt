@@ -11,7 +11,6 @@ object ExpirationCalculator {
         originalExpired: Date?
     ): Date {
 
-        // Gunakan equals dengan ignoreCase agar teks bumbu/Bumbu tetap terdeteksi
         if (category.equals("Bumbu dan Bahan", ignoreCase = true)) {
             return originalExpired ?: openedDate
         }

@@ -37,7 +37,6 @@ fun RiwayatCard(
     val context = LocalContext.current
     val sdf = SimpleDateFormat("dd MMM yyyy", Locale("id", "ID"))
 
-    // HABIS -> Biru Indigo (Selesai), TERBUANG -> Merah (Gagal)
     val colorTheme = if (history.finalStatus == FinalStatus.CONSUMED) Color(0xFF5E72E4) else Color(0xFFF5365C)
 
     Card(
@@ -67,7 +66,6 @@ fun RiwayatCard(
                     .fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // FOTO PRODUK
                 Box(
                     modifier = Modifier
                         .size(80.dp)
@@ -128,7 +126,6 @@ fun RiwayatCard(
                         }
                     }
 
-                    // FIX: Menggunakan Icons.Default.DateRange (Pasti Ada)
                     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 4.dp)) {
                         Icon(Icons.Default.DateRange, null, modifier = Modifier.size(12.dp), tint = Color.Gray)
                         Spacer(modifier = Modifier.width(6.dp))

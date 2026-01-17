@@ -76,7 +76,6 @@ fun HalamanDashboard(
                 .padding(padding)
         ) {
 
-            // ================= HEADER =================
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -163,7 +162,6 @@ fun HalamanDashboard(
 
             Spacer(Modifier.height(10.dp))
 
-            // ================= STATS =================
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -189,7 +187,6 @@ fun HalamanDashboard(
 
             Spacer(Modifier.height(24.dp))
 
-            // ================= KATEGORI =================
             Text(
                 "Pilih Kategori",
                 modifier = Modifier.padding(horizontal = 24.dp),
@@ -212,7 +209,6 @@ fun HalamanDashboard(
 
             Spacer(Modifier.height(20.dp))
 
-            // ================= INFO JUMLAH PRODUK (TENGAH) =================
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -222,7 +218,7 @@ fun HalamanDashboard(
                 if (filteredProducts.isNotEmpty()) {
                     Surface(
                         color = Color(0xFF5E72E4).copy(alpha = 0.08f),
-                        shape = RoundedCornerShape(50.dp) // Bentuk kapsul
+                        shape = RoundedCornerShape(50.dp)
                     ) {
                         Text(
                             text = "Menampilkan ${filteredProducts.size} Produk",
@@ -238,7 +234,6 @@ fun HalamanDashboard(
 
             Spacer(Modifier.height(8.dp))
 
-            // ================= DAFTAR PRODUK =================
             if (filteredProducts.isEmpty()) {
                 Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     Text("Tidak ada produk ditemukan", color = Color.Gray)
@@ -258,7 +253,6 @@ fun HalamanDashboard(
     }
 }
 
-/* ================= SUPPORT ================= */
 
 @Composable
 fun CategoryChip(name: String, isSelected: Boolean, onClick: () -> Unit) {

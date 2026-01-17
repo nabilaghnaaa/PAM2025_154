@@ -24,7 +24,6 @@ class DetailProdukViewModel(
         }
     }
 
-    // ================= TELAH DIBUKA =================
     fun updateOpened(
         product: Product,
         openedDate: Date,
@@ -58,7 +57,6 @@ class DetailProdukViewModel(
         }
     }
 
-    // ================= HABIS / DIBUANG =================
     fun updateStatus(
         productId: Int,
         status: ProductStatus,

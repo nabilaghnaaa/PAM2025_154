@@ -69,7 +69,6 @@ fun HalamanRiwayat(
                             onClick = { showDeleteAllDialog = true },
                             modifier = Modifier.padding(8.dp).background(Color(0xFFFFF1F1), CircleShape)
                         ) {
-                            // FIX: Menggunakan Icons.Default.Delete (Pasti Ada)
                             Icon(Icons.Default.Delete, null, tint = Color(0xFFF5365C))
                         }
                     }
@@ -87,7 +86,6 @@ fun HalamanRiwayat(
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    // FIX: Menggunakan Icons.Default.Refresh (Pasti Ada)
                     Icon(Icons.Default.Refresh, null, modifier = Modifier.size(80.dp), tint = Color.LightGray.copy(0.4f))
                     Spacer(Modifier.height(12.dp))
                     Text("Riwayat masih kosong", color = Color.LightGray)

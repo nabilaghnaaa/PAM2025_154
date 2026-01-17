@@ -20,7 +20,6 @@ class ProductRepository {
         }
     }
 
-    // ✅ dipakai detail
     suspend fun getDetailProduct(userId: Int, productId: Int): Product? {
         return try {
             apiService.getProducts(userId).data.find { it.productId == productId }
@@ -29,7 +28,6 @@ class ProductRepository {
         }
     }
 
-    // ================= TAMBAH PRODUK =================
     suspend fun addProduct(product: Product): Boolean {
         return try {
             val dateStr = product.expiredDate?.let { dbDateFormat.format(it) } ?: ""
@@ -39,7 +37,7 @@ class ProductRepository {
                 productName = product.productName,
                 expiredDate = dateStr,
                 quantity = product.quantity,
-                unit = product.unit,                 // ✅ FIX
+                unit = product.unit,
                 location = product.location,
                 photoUrl = product.photoUrl,
                 category = product.category
@@ -51,7 +49,6 @@ class ProductRepository {
         }
     }
 
-    // ================= UPDATE PRODUK =================
     suspend fun updateProduct(product: Product): Boolean {
         return try {
             val dateStr = product.expiredDate?.let { dbDateFormat.format(it) } ?: ""
@@ -61,7 +58,7 @@ class ProductRepository {
                 productName = product.productName,
                 expiredDate = dateStr,
                 quantity = product.quantity,
-                unit = product.unit,                 // ✅ FIX
+                unit = product.unit,
                 location = product.location,
                 photoUrl = product.photoUrl,
                 category = product.category
@@ -81,7 +78,6 @@ class ProductRepository {
         }
     }
 
-    // ================= TELAH DIBUKA =================
     suspend fun updateOpenedProduct(
         productId: Int,
         newExpired: Date
@@ -97,7 +93,6 @@ class ProductRepository {
         }
     }
 
-    // ================= HABIS / DIBUANG =================
     suspend fun updateStatus(productId: Int, status: ProductStatus): Boolean {
         return try {
             apiService.updateStatus(productId, status.name, null).status == "success"

@@ -12,7 +12,6 @@ class EditProdukViewModel(
     private val repository: ProductRepository
 ) : ViewModel() {
 
-    // 🔥 INI YANG KURANG DAN MENYEBABKAN ERROR
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading
 

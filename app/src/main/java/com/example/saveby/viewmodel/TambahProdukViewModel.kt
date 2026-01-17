@@ -23,10 +23,7 @@ class TambahProdukViewModel(
         viewModelScope.launch {
             _isLoading.value = true
             try {
-                // 🔥 Tidak bergantung pada nilai boolean
                 repository.addProduct(product)
-
-                // 🔥 Kalau tidak error → dianggap sukses
                 onSuccess()
 
             } catch (e: Exception) {

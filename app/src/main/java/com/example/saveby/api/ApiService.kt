@@ -4,8 +4,6 @@ import com.example.saveby.modeldata.*
 import retrofit2.http.*
 
 interface ApiService {
-
-    // ================= AUTH =================
     @FormUrlEncoded
     @POST("login.php")
     suspend fun login(
@@ -21,7 +19,6 @@ interface ApiService {
         @Field("password") password: String
     ): CommonResponse
 
-    // ================= PRODUCT =================
     @GET("get_products.php")
     suspend fun getProducts(@Query("user_id") userId: Int): ProductResponse
 
@@ -55,7 +52,6 @@ interface ApiService {
     @POST("delete_product.php")
     suspend fun deleteProduct(@Field("product_id") productId: Int): CommonResponse
 
-    // ================= STATUS =================
     @FormUrlEncoded
     @POST("update_status.php")
     suspend fun updateStatus(
@@ -66,21 +62,18 @@ interface ApiService {
         @Field("storage_type") storageType: String? = null
     ): CommonResponse
 
-    // ================= HISTORY =================
     @GET("get_history.php")
     suspend fun getHistory(
         @Query("user_id") userId: Int,
         @Query("status") status: String
     ): HistoryResponse
 
-    // 🔥 FITUR BARU: HAPUS RIWAYAT SATUAN
     @FormUrlEncoded
     @POST("delete_history.php")
     suspend fun deleteHistory(
         @Field("history_id") historyId: Int
     ): CommonResponse
 
-    // 🔥 FITUR BARU: HAPUS SEMUA RIWAYAT (RESET)
     @FormUrlEncoded
     @POST("delete_all_history.php")
     suspend fun deleteAllHistory(
@@ -88,8 +81,6 @@ interface ApiService {
         @Field("status") status: String
     ): CommonResponse
 
-
-    // ================= STATISTIC =================
     @GET("statistic.php")
     suspend fun getStatistic(@Query("user_id") userId: Int): StatisticResponse
 }

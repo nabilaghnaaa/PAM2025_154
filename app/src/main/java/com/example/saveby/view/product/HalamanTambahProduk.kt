@@ -46,8 +46,6 @@ fun HalamanTambahProduk(
     var lokasi by remember { mutableStateOf("") }
     var selectedDateMillis by remember { mutableStateOf<Long?>(null) }
     var imageUri by remember { mutableStateOf<Uri?>(null) }
-
-    // ✅ KATEGORI
     var expanded by remember { mutableStateOf(false) }
     var selectedCategory by remember { mutableStateOf("Minuman Kemasan") }
 
@@ -102,7 +100,6 @@ fun HalamanTambahProduk(
             verticalArrangement = Arrangement.spacedBy(18.dp)
         ) {
 
-            // ================= FOTO =================
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -127,7 +124,6 @@ fun HalamanTambahProduk(
                 }
             }
 
-            // ================= KATEGORI =================
             Text("Kategori Produk", fontSize = 12.sp, color = Color.Gray)
 
             ExposedDropdownMenuBox(
@@ -163,7 +159,6 @@ fun HalamanTambahProduk(
             CustomField("Nama Produk", nama, Icons.Default.Edit) { nama = it }
             CustomField("Lokasi Penyimpanan", lokasi, Icons.Default.Place) { lokasi = it }
 
-            // ================= JUMLAH =================
             OutlinedTextField(
                 value = jumlah,
                 onValueChange = { jumlah = it.filter { c -> c.isDigit() } },
@@ -174,7 +169,6 @@ fun HalamanTambahProduk(
                 singleLine = true
             )
 
-            // ================= SATUAN =================
             OutlinedTextField(
                 value = satuan,
                 onValueChange = { satuan = it },
@@ -184,8 +178,6 @@ fun HalamanTambahProduk(
                 shape = RoundedCornerShape(14.dp),
                 singleLine = true
             )
-
-            // ================= EXPIRED =================
             Surface(
                 modifier = Modifier.fillMaxWidth().clickable { showDatePicker = true },
                 shape = RoundedCornerShape(14.dp),
@@ -202,7 +194,6 @@ fun HalamanTambahProduk(
                 }
             }
 
-            // ================= BUTTON =================
             Button(
                 onClick = {
                     onSimpan(
@@ -234,7 +225,6 @@ fun HalamanTambahProduk(
     }
 }
 
-/* ================= HELPERS ================= */
 
 fun saveToInternal(context: Context, uri: Uri): String? {
     return try {

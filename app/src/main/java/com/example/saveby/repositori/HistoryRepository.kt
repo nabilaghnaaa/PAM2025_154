@@ -15,7 +15,6 @@ class HistoryRepository {
         }
     }
 
-    // 🔥 Tambahkan fungsi hapus satuan ke API
     suspend fun deleteHistory(historyId: Int): Boolean {
         return try {
             val response = api.deleteHistory(historyId)
@@ -25,7 +24,6 @@ class HistoryRepository {
         }
     }
 
-    // 🔥 Tambahkan fungsi hapus semua ke API
     suspend fun deleteAllHistory(userId: Int, status: FinalStatus): Boolean {
         return try {
             val response = api.deleteAllHistory(userId, status.name)

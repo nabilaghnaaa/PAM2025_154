@@ -46,7 +46,6 @@ fun ProductItem(product: Product, onClick: () -> Unit) {
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Garis Indikator di samping berdasarkan kondisi sisa hari
             Box(
                 modifier = Modifier
                     .fillMaxHeight()
@@ -60,7 +59,6 @@ fun ProductItem(product: Product, onClick: () -> Unit) {
                     .fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // BOX FOTO PRODUK
                 Box(
                     modifier = Modifier
                         .size(75.dp)
@@ -76,12 +74,10 @@ fun ProductItem(product: Product, onClick: () -> Unit) {
                             contentDescription = product.productName,
                             modifier = Modifier.fillMaxSize(),
                             contentScale = ContentScale.Crop,
-                            // Menggunakan defaultproduct2 sebagai resource fallback
                             error = painterResource(R.drawable.defaultproduct2),
                             placeholder = painterResource(R.drawable.defaultproduct2)
                         )
                     } else {
-                        // Jika path foto kosong, tampilkan defaultproduct2
                         Image(
                             painter = painterResource(id = R.drawable.defaultproduct2),
                             contentDescription = null,
@@ -93,7 +89,6 @@ fun ProductItem(product: Product, onClick: () -> Unit) {
 
                 Spacer(modifier = Modifier.width(16.dp))
 
-                // Informasi Produk
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = product.productName,
@@ -103,11 +98,10 @@ fun ProductItem(product: Product, onClick: () -> Unit) {
                         overflow = TextOverflow.Ellipsis
                     )
 
-                    // Menampilkan Kategori Produk
                     Text(
                         text = product.category,
                         fontSize = 12.sp,
-                        color = Color(0xFF5E72E4), // Warna tema biru aplikasi
+                        color = Color(0xFF5E72E4),
                         fontWeight = FontWeight.Medium
                     )
 
@@ -118,7 +112,6 @@ fun ProductItem(product: Product, onClick: () -> Unit) {
 
                     Spacer(modifier = Modifier.height(6.dp))
 
-                    // Badge Sisa Hari / Kondisi Kedaluwarsa
                     Surface(
                         color = product.indicatorColor.copy(alpha = 0.1f),
                         shape = RoundedCornerShape(8.dp)
@@ -133,7 +126,6 @@ fun ProductItem(product: Product, onClick: () -> Unit) {
                     }
                 }
 
-                // Ikon panah ke kanan
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
                     contentDescription = null,

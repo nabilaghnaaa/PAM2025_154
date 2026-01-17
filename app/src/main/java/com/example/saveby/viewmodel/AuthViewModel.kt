@@ -19,7 +19,6 @@ class AuthViewModel(
     private val _error = MutableStateFlow<String?>(null)
     val error: StateFlow<String?> = _error
 
-    // LOGIN: Menerima SessionManager untuk simpan Nama
     fun login(email: String, password: String, sessionManager: SessionManager, onSuccess: () -> Unit) {
         viewModelScope.launch {
             _loading.value = true
@@ -27,10 +26,9 @@ class AuthViewModel(
             try {
                 val result = repository.login(email, password)
                 result.onSuccess { user ->
-                    // SIMPAN DATA LOGIN TERMASUK NAMA
                     sessionManager.saveLoginSession(
                         userId = user.userId,
-                        name = user.name, // Ini yang dikirim dari XAMPP
+                        name = user.name,
                         email = user.email
                     )
                     onSuccess()

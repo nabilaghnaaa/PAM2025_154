@@ -24,7 +24,6 @@ fun NavGraphBuilder.productGraph(
     container: ContainerApp
 ) {
 
-    // ================= TAMBAH PRODUK =================
     composable(PetaNavigasi.ADD_PRODUCT) {
 
         val vm: TambahProdukViewModel = viewModel(factory = viewModelFactory {
@@ -50,7 +49,6 @@ fun NavGraphBuilder.productGraph(
         )
     }
 
-    // ================= DETAIL PRODUK =================
     composable(
         route = PetaNavigasi.DETAIL_PRODUCT,
         arguments = listOf(navArgument("productId") { type = NavType.IntType })
@@ -99,7 +97,6 @@ fun NavGraphBuilder.productGraph(
         }
     }
 
-    // ================= EDIT PRODUK =================
     composable(
         route = "edit_product/{productId}",
         arguments = listOf(navArgument("productId") { type = NavType.IntType })

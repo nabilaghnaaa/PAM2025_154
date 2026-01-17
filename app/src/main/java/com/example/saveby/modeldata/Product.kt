@@ -18,7 +18,7 @@ data class Product(
     @SerializedName("opened_date") val openedDate: Date? = null,
     @SerializedName("unit") val unit: String = ""
 ) {
-    // Logic FR-09: Hitung sisa hari presisi (00:00:00)
+
     val daysLeft: Long
         get() {
             if (expiredDate == null) return 0
@@ -42,19 +42,17 @@ data class Product(
             return TimeUnit.MILLISECONDS.toDays(diff)
         }
 
-    // Logic Warna: Merah (<=0), Oranye (1-7), Hijau (>7)
     val indicatorColor: androidx.compose.ui.graphics.Color
         get() = when {
-            daysLeft > 7 -> androidx.compose.ui.graphics.Color(0xFF4CAF50)      // HIJAU
-            daysLeft >= 1 -> androidx.compose.ui.graphics.Color(0xFFFF9800)    // ORANYE
-            else -> androidx.compose.ui.graphics.Color(0xFFF44336)             // MERAH
+            daysLeft > 7 -> androidx.compose.ui.graphics.Color(0xFF4CAF50)
+            daysLeft >= 1 -> androidx.compose.ui.graphics.Color(0xFFFF9800)
+            else -> androidx.compose.ui.graphics.Color(0xFFF44336)
         }
 
-    // Properti tambahan untuk sorting otomatis di Dashboard
     val priority: Int
         get() = when {
-            daysLeft <= 0 -> 0 // Merah paling atas
-            daysLeft <= 7 -> 1 // Oranye tengah
-            else -> 2          // Hijau bawah
+            daysLeft <= 0 -> 0
+            daysLeft <= 7 -> 1
+            else -> 2
         }
 }

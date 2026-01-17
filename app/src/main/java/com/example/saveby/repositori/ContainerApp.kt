@@ -8,7 +8,6 @@ import com.example.saveby.util.SessionManager
  */
 class ContainerApp(private val context: Context) {
 
-    // TAMBAHKAN INI: Agar MainActivity bisa memanggil container.sessionManager
     val sessionManager: SessionManager by lazy {
         SessionManager(context)
     }

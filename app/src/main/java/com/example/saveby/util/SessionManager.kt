@@ -20,7 +20,6 @@ class SessionManager(context: Context) {
     fun getUserId(): Int = prefs.getInt(Constants.KEY_USER_ID, -1)
     fun getEmail(): String? = prefs.getString(Constants.KEY_EMAIL, null)
 
-    // PERBAIKAN: Selalu kembalikan "User" jika name null
     fun getName(): String {
         return prefs.getString(Constants.KEY_NAME, "User") ?: "User"
     }

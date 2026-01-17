@@ -82,8 +82,6 @@ fun HalamanEditProduk(
         ) { DatePicker(state = state) }
     }
 
-    /* ================= DIALOG ================= */
-
     if (showConfirmDialog) {
         AlertDialog(
             onDismissRequest = { showConfirmDialog = false },
@@ -131,7 +129,6 @@ fun HalamanEditProduk(
         )
     }
 
-    /* ================= UI ================= */
 
     Scaffold(
         topBar = {

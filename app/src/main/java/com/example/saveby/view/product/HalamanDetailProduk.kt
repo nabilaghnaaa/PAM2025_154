@@ -59,7 +59,6 @@ fun HalamanDetailProduk(
     var newLocation by remember { mutableStateOf(product.location) }
     var showDatePicker by remember { mutableStateOf(false) }
 
-    // ================= DELETE DIALOG =================
     if (showDeleteDialog) {
         AlertDialog(
             onDismissRequest = { showDeleteDialog = false },
@@ -81,7 +80,6 @@ fun HalamanDetailProduk(
         )
     }
 
-    // ================= FINAL CONFIRM DIALOG =================
     if (showConfirmFinal && selectedFinalStatus != null) {
         AlertDialog(
             onDismissRequest = { showConfirmFinal = false },
@@ -99,7 +97,6 @@ fun HalamanDetailProduk(
         )
     }
 
-    // ================= OPENED DIALOG =================
     if (showOpenedDialog) {
         AlertDialog(
             onDismissRequest = { showOpenedDialog = false },
@@ -195,7 +192,6 @@ fun HalamanDetailProduk(
         ) { DatePicker(state = state) }
     }
 
-    // ================= MAIN UI =================
     Box(modifier = Modifier.fillMaxSize().background(Color(0xFFF8F9FF))) {
         Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
 
@@ -264,13 +260,11 @@ fun HalamanDetailProduk(
             }
         }
 
-        // ================= BOTTOM ACTIONS =================
         Column(
             modifier = Modifier.align(Alignment.BottomCenter).padding(24.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
 
-            // 🔥 FIXED: sekarang FILLED (tidak transparan)
             Button(
                 onClick = { showDeleteDialog = true },
                 modifier = Modifier.fillMaxWidth().height(56.dp),
@@ -298,7 +292,6 @@ fun HalamanDetailProduk(
         }
     }
 
-    // ================= BOTTOM SHEET =================
     if (showSheet) {
         ModalBottomSheet(onDismissRequest = { showSheet = false }) {
             Column(Modifier.padding(24.dp)) {
@@ -327,7 +320,6 @@ fun HalamanDetailProduk(
     }
 }
 
-/* ---------- REUSABLE COMPONENTS ---------- */
 
 @Composable
 fun DetailItem(icon: ImageVector, title: String, content: String) {

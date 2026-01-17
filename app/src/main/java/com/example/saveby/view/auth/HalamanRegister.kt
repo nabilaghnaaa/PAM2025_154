@@ -38,12 +38,10 @@ fun HalamanRegister(
     var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
 
-    // Logika Validasi Format Email (@ dan .com)
     val isEmailValid = remember(email) {
         Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    // Logika Validasi Password (Minimal 6 karakter)
     val isPasswordValid = remember(password) {
         password.length >= 6
     }
@@ -76,7 +74,6 @@ fun HalamanRegister(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // --- Field Nama ---
             OutlinedTextField(
                 value = name, onValueChange = { name = it },
                 label = { Text("Full Name") },
@@ -88,7 +85,6 @@ fun HalamanRegister(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // --- Field Email dengan Validasi ---
             OutlinedTextField(
                 value = email,
                 onValueChange = { email = it },
@@ -111,7 +107,6 @@ fun HalamanRegister(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // --- Field Password dengan Validasi Panjang ---
             OutlinedTextField(
                 value = password,
                 onValueChange = { password = it },
@@ -144,7 +139,6 @@ fun HalamanRegister(
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            // --- Tombol Register (Hanya aktif jika semua valid) ---
             Button(
                 onClick = { onRegisterClick(name, email, password) },
                 modifier = Modifier.fillMaxWidth().height(56.dp),

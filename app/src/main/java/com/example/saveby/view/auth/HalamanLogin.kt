@@ -40,7 +40,6 @@ fun HalamanLogin(
     var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
 
-    // Logika Validasi Email agar tidak bisa sembarang ketik
     val isEmailValid = remember(email) {
         Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
@@ -50,14 +49,13 @@ fun HalamanLogin(
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.background)
     ) {
-        // --- BACKGROUND PRODUK (REDUPI) ---
         Image(
             painter = painterResource(id = R.drawable.product),
             contentDescription = null,
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter)
-                .alpha(0.3f), // Redupkan agar teks Register kelihatan
+                .alpha(0.3f),
             contentScale = ContentScale.FillWidth
         )
 
@@ -70,7 +68,6 @@ fun HalamanLogin(
         ) {
             Spacer(modifier = Modifier.height(60.dp))
 
-            // --- LOGO SAVEBY BESAR ---
             Image(
                 painter = painterResource(id = R.drawable.logo_saveby),
                 contentDescription = "Logo SaveBy",
@@ -100,7 +97,6 @@ fun HalamanLogin(
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            // --- FIELD EMAIL ---
             OutlinedTextField(
                 value = email,
                 onValueChange = { email = it },
@@ -123,7 +119,6 @@ fun HalamanLogin(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // --- FIELD PASSWORD + MATA ---
             OutlinedTextField(
                 value = password,
                 onValueChange = { password = it },
@@ -141,7 +136,6 @@ fun HalamanLogin(
                 modifier = Modifier.fillMaxWidth()
             )
 
-            // Pesan error dari database/server
             if (errorMessage != null) {
                 Text(
                     text = errorMessage,
@@ -153,7 +147,6 @@ fun HalamanLogin(
 
             Spacer(modifier = Modifier.height(32.dp))
 
-            // --- TOMBOL LOGIN (HANYA AKTIF JIKA EMAIL VALID) ---
             Button(
                 onClick = { onLoginClick(email, password) },
                 modifier = Modifier
@@ -171,7 +164,6 @@ fun HalamanLogin(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // --- NAVIGASI KE REGISTER ---
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.Center,
@@ -183,7 +175,6 @@ fun HalamanLogin(
                 }
             }
 
-            // Spacer bawah biar gak nempel gambar
             Spacer(modifier = Modifier.height(100.dp))
         }
     }
