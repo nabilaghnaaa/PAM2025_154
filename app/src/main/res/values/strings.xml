@@ -1,0 +1,108 @@
+<resources>
+
+    <!-- ===================== -->
+    <!-- APP -->
+    <!-- ===================== -->
+    <string name="app_name">SaveBy</string>
+
+    <!-- ===================== -->
+    <!-- GENERAL -->
+    <!-- ===================== -->
+    <string name="ok">OK</string>
+    <string name="cancel">Batal</string>
+    <string name="save">Simpan</string>
+    <string name="delete">Hapus</string>
+    <string name="edit">Edit</string>
+    <string name="back">Kembali</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="logout">Logout</string>
+    <string name="loading">Memuat...</string>
+
+    <!-- ===================== -->
+    <!-- AUTH -->
+    <!-- ===================== -->
+    <string name="login">Login</string>
+    <string name="register">Registrasi</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+    <string name="dont_have_account">Belum punya akun?</string>
+    <string name="already_have_account">Sudah punya akun?</string>
+    <string name="login_failed">Login gagal. Periksa email dan password.</string>
+    <string name="register_success">Registrasi berhasil. Silakan login.</string>
+    <string name="empty_field_warning">Semua field wajib diisi.</string>
+
+    <!-- ===================== -->
+    <!-- DASHBOARD -->
+    <!-- ===================== -->
+    <string name="dashboard">Dashboard</string>
+    <string name="search_product">Cari produk...</string>
+    <string name="add_product">Tambah Produk</string>
+    <string name="expired_today">Hampir / sudah kedaluwarsa</string>
+    <string name="expired_warning">Mendekati kedaluwarsa</string>
+    <string name="expired_safe">Masih aman</string>
+
+    <!-- ===================== -->
+    <!-- STATISTIC -->
+    <!-- ===================== -->
+    <string name="statistic">Statistik</string>
+    <string name="consumed_this_month">Produk Habis Bulan Ini</string>
+    <string name="wasted_this_month">Produk Terbuang Bulan Ini</string>
+    <string name="total_consumed">Total Consumed</string>
+    <string name="total_wasted">Total Wasted</string>
+
+    <!-- ===================== -->
+    <!-- PRODUCT -->
+    <!-- ===================== -->
+    <string name="product">Produk</string>
+    <string name="product_name">Nama Produk</string>
+    <string name="expired_date">Tanggal Kedaluwarsa</string>
+    <string name="quantity">Jumlah / Volume</string>
+    <string name="location">Lokasi Penyimpanan</string>
+    <string name="photo">Foto Produk</string>
+    <string name="add_photo">Tambah Foto</string>
+    <string name="product_detail">Detail Produk</string>
+    <string name="edit_product">Edit Produk</string>
+    <string name="delete_product">Hapus Produk</string>
+    <string name="delete_confirmation">Apakah Anda yakin ingin menghapus produk ini?</string>
+
+    <!-- ===================== -->
+    <!-- STATUS -->
+    <!-- ===================== -->
+    <string name="status">Status</string>
+    <string name="status_active">Aktif</string>
+    <string name="status_opened">Dibuka</string>
+    <string name="status_consumed">Habis (Consumed)</string>
+    <string name="status_wasted">Dibuang (Wasted)</string>
+    <string name="change_status">Ubah Status</string>
+    <string name="opened_success">Produk berhasil ditandai sebagai dibuka.</string>
+    <string name="consumed_success">Produk berhasil dipindahkan ke riwayat (Habis).</string>
+    <string name="wasted_success">Produk berhasil dipindahkan ke riwayat (Dibuang).</string>
+
+    <!-- ===================== -->
+    <!-- HISTORY -->
+    <!-- ===================== -->
+    <string name="history">Riwayat</string>
+    <string name="consumed_history">Riwayat Produk Habis</string>
+    <string name="wasted_history">Riwayat Produk Terbuang</string>
+    <string name="filter">Filter</string>
+    <string name="no_history">Belum ada riwayat.</string>
+
+    <!-- ===================== -->
+    <!-- PROFILE -->
+    <!-- ===================== -->
+    <string name="profile">Profil</string>
+    <string name="account_information">Informasi Akun</string>
+    <string name="logout_confirmation">Apakah Anda yakin ingin logout?</string>
+
+    <!-- ===================== -->
+    <!-- MESSAGE -->
+    <!-- ===================== -->
+    <string name="data_saved">Data berhasil disimpan.</string>
+    <string name="data_updated">Data berhasil diperbarui.</string>
+    <string name="data_deleted">Data berhasil dihapus.</string>
+    <string name="connection_error">Koneksi internet bermasalah.</string>
+    <string name="unknown_error">Terjadi kesalahan. Silakan coba lagi.</string>
+
+</resources>

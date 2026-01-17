@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- ===================== -->
+    <!-- BRAND / BASE COLOR -->
+    <!-- ===================== -->
+    <color name="saveby_primary">#2E7D32</color>        <!-- Hijau tua (segar, makanan, aman) -->
+    <color name="saveby_primary_dark">#1B5E20</color>
+    <color name="saveby_secondary">#81C784</color>      <!-- Hijau muda -->
+    <color name="saveby_background">#F6F8F6</color>     <!-- Putih kehijauan lembut -->
+    <color name="saveby_surface">#FFFFFF</color>
+    <color name="saveby_text_primary">#212121</color>
+    <color name="saveby_text_secondary">#616161</color>
+
+    <!-- ===================== -->
+    <!-- EXPIRATION INDICATOR -->
+    <!-- ===================== -->
+    <color name="expired_safe">#43A047</color>          <!-- Hijau: masih aman -->
+    <color name="expired_warning">#FB8C00</color>       <!-- Oranye: mendekati -->
+    <color name="expired_danger">#E53935</color>        <!-- Merah: hampir / lewat -->
+
+    <!-- ===================== -->
+    <!-- STATUS COLOR -->
+    <!-- ===================== -->
+    <color name="status_active">#2E7D32</color>
+    <color name="status_opened">#0277BD</color>         <!-- Biru: sudah dibuka -->
+    <color name="status_consumed">#6A1B9A</color>       <!-- Ungu: habis -->
+    <color name="status_wasted">#C62828</color>         <!-- Merah tua: dibuang -->
+
+    <!-- ===================== -->
+    <!-- FEEDBACK -->
+    <!-- ===================== -->
+    <color name="success">#2E7D32</color>
+    <color name="warning">#FB8C00</color>
+    <color name="error">#D32F2F</color>
+    <color name="info">#0288D1</color>
+
+    <!-- ===================== -->
+    <!-- UI SUPPORT -->
+    <!-- ===================== -->
+    <color name="divider">#E0E0E0</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="fab_color">#2E7D32</color>
+    <color name="icon_tint">#424242</color>
+
+</resources>
